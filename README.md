@@ -6,5 +6,6 @@ animation to it. There are three animation options, .fill, .shake, and .flash. Y
 
 	Ani.mate(yourButton, style: .fill)
 
-I've attached the swift file to this post in case anyone wants to use it. I added comments
-so that you can edit the animations without having to watch the tutorial.
+I added comments so that you can edit the animations without having to watch the tutorial.
+
+Here's the link just in case: https://www.youtube.com/watch?v=ox2MieJzcRQ
