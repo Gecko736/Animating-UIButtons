@@ -50,21 +50,21 @@ class Ani {
         case flash
     }
     
-    static func mate(_ button: UIControl, style: Style) {
+    static func mate(_ sender: UIControl, style: Style) {
         switch style {
         case Style.fill:
-            button.layer.add(fill, forKey: nil)
+            sender.layer.add(fill, forKey: nil)
             
         case Style.shake:
             shake.fromValue = NSValue(cgPoint: CGPoint(x: button.center.x - 5, y: button.center.y)) // left-most postition in the animation
             shake.toValue = NSValue(cgPoint: CGPoint(x: button.center.x + 5, y: button.center.y)) // right-most position in the animation
-            button.layer.add(shake, forKey: nil)
+            sender.layer.add(shake, forKey: nil)
             
         default:
             curtain.frame = button.frame // make the curtain the same size at the button
             curtain.frame.origin = CGPoint(x: 0, y: 0) // set the curtain's origin to 0, because it's placed relative to the button's origin
             
-            button.layer.addSublayer(curtain)
+            sender.layer.addSublayer(curtain)
             curtain.add(flash, forKey: nil)
             DispatchQueue.main.asyncAfter(deadline: .now() + flash.duration - 0.05) {
                 curtain.removeFromSuperlayer()
