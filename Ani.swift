@@ -56,12 +56,12 @@ class Ani {
             sender.layer.add(fill, forKey: nil)
             
         case Style.shake:
-            shake.fromValue = NSValue(cgPoint: CGPoint(x: button.center.x - 5, y: button.center.y)) // left-most postition in the animation
-            shake.toValue = NSValue(cgPoint: CGPoint(x: button.center.x + 5, y: button.center.y)) // right-most position in the animation
+            shake.fromValue = NSValue(cgPoint: CGPoint(x: sender.center.x - 5, y: button.center.y)) // left-most postition in the animation
+            shake.toValue = NSValue(cgPoint: CGPoint(x: sender.center.x + 5, y: button.center.y)) // right-most position in the animation
             sender.layer.add(shake, forKey: nil)
             
         default:
-            curtain.frame = button.frame // make the curtain the same size at the button
+            curtain.frame = sender.frame // make the curtain the same size at the button
             curtain.frame.origin = CGPoint(x: 0, y: 0) // set the curtain's origin to 0, because it's placed relative to the button's origin
             
             sender.layer.addSublayer(curtain)
