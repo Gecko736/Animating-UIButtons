@@ -56,8 +56,8 @@ class Ani {
             sender.layer.add(fill, forKey: nil)
             
         case Style.shake:
-            shake.fromValue = NSValue(cgPoint: CGPoint(x: sender.center.x - 5, y: button.center.y)) // left-most postition in the animation
-            shake.toValue = NSValue(cgPoint: CGPoint(x: sender.center.x + 5, y: button.center.y)) // right-most position in the animation
+            shake.fromValue = NSValue(cgPoint: CGPoint(x: sender.center.x - 5, y: sender.center.y)) // left-most postition in the animation
+            shake.toValue = NSValue(cgPoint: CGPoint(x: sender.center.x + 5, y: sender.center.y)) // right-most position in the animation
             sender.layer.add(shake, forKey: nil)
             
         default:
